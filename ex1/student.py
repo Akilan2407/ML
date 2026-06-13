@@ -3,14 +3,14 @@ import matplotlib.pyplot as pl
 data=p.read_csv('student_data.csv')
 #print(data.to_string())
 #print first 10 rows
-print(data.head(1))
+print(data.head(10))
 #numbers of rows and columns in a dataset
 rows, cols = data.shape
 print(f"Number of rows: {rows}")
 print(f"Number of columns: {cols}")
 #attributes
 print('Attributes in the dataset')
-data.info();
+print(data.columns)
 #missing data in the columns
 print('NULL DATAS:')
 print(data.isnull().sum())
@@ -23,8 +23,6 @@ print(f"median of column 'G1' is '{median}'")
 #min and max
 print(f"minimum of column 'G1' is {cd.min()}")
 print(f"maximum of column 'G1' is {cd.max()}")
-#attributes
-print(data.columns)
 #numerical and categorical columns
 numerical_cols = data.select_dtypes(include=["int64", "float64"]).columns.tolist()
 categorical_cols = data.select_dtypes(include=["object", "category"]).columns.tolist()
@@ -40,7 +38,7 @@ print(data.corr(numeric_only=True))
 #target variable
 for col in data.columns:
     unique_vals = data[col].nunique()
-    if unique_vals is 2:   # threshold (you can change)
+    if unique_vals is 2:   
         print(f"Possible target: {col} (unique values: {unique_vals})")
 
 
