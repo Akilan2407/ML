@@ -1,5 +1,5 @@
 # Semester-5 #
-## Machine Learnig Lab ## 
+## Machine Learning Lab ## 
 ### Exercise Problems ###
 '''
 1.Data engineering
