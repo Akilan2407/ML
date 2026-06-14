@@ -34,10 +34,13 @@ pl.show();
 #correlation
 print("\nCorrelation Matrix:")
 print(data.corr(numeric_only=True))
+#correlation between G1 and G3
+correlation = data['G1'].corr(data['G3'])
+print(f"Correlation between G1 and G3: {correlation}")
 #target variable
 for col in data.columns:
     unique_vals = data[col].nunique()
-    if unique_vals is 2:   
+    if unique_vals == 2:   
         print(f"Possible target: {col} (unique values: {unique_vals})")
 
 
