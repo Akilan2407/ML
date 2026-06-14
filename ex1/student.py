@@ -28,7 +28,6 @@ numerical_cols = data.select_dtypes(include=["int64", "float64"]).columns.tolist
 categorical_cols = data.select_dtypes(include=["object", "category"]).columns.tolist()
 print("Numerical:", numerical_cols)
 print("Categorical:", categorical_cols)
-
 #histogram
 data['G1'].plot(kind='hist')
 pl.show();
