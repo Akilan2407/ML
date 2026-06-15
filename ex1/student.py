@@ -43,6 +43,13 @@ for col in data.columns:
     if unique_vals == 2:   
         print(f"Possible target: {col} (unique values: {unique_vals})")
 
+y = data["G3"]
+# Define feature set (all columns except G3)
+X = data.drop(columns=["G3"])
+print("Target variable (y):")
+print(y.head())
+print("\nFeature set (X):")
+print(X.head())
 
 
 
