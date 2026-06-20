@@ -41,7 +41,7 @@ print(f"Correlation between G1 and G3: {correlation}")
 for col in data.columns:
     unique_vals = data[col].nunique()
     if unique_vals == 2:   
-        print(f"Possible target: {col} (unique values: {unique_vals})")
+        print(f"Possible target: {col}  (unique values: {unique_vals})")
 
 y = data["G3"]
 # Define feature set (all columns except G3)
