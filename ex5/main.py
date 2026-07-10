@@ -57,7 +57,7 @@ X_train, X_test, y_train, y_test = train_test_split(
 )
 
 # 10. Train model
-model = DecisionTreeClassifier(max_depth=4, random_state=42)
+model = DecisionTreeClassifier(criterion='entropy')
 model.fit(X_train, y_train)
 
 print("Model trained successfully!")
