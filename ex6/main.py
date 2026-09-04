@@ -2,7 +2,6 @@ import pandas as p
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
-
 # Load dataset
 data = p.read_csv("Walmart.csv")
 # Keep only required columns
@@ -40,3 +39,6 @@ print(f"R2 Score: {r2}")
 # Best Fit Line Equation
 print(f"\nBest Fitting Line Equation:")
 print(f"Weekly_Sales = {slope:.2f} * Temperature + {intercept:.2f}")
+
+
+

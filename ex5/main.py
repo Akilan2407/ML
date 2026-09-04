@@ -1,5 +1,3 @@
-# TITANIC - FINAL CORRECT CODE (ALL FIXED)
-
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -69,12 +67,8 @@ plot_tree(model,
           class_names=['Not Survived','Survived'],
           filled=True)
 plt.show()
-
-
 print("\nEnter Passenger Details:")
-
 pclass = int(input("Pclass (1/2/3): "))
-
 sex_map = {'male': 'male', 'm': 'male', '1': 'male',
            'female': 'female', 'f': 'female', '0': 'female'}
 while True:
@@ -83,7 +77,6 @@ while True:
         sex = sex_map[sex_raw]
         break
     print("  Invalid input. Please enter 'male' or 'female'.")
-
 age = float(input("Age: "))
 sibsp = int(input("Siblings/Spouses aboard: "))
 parch = int(input("Parents/Children aboard: "))
